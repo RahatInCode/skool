@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Skool
 
-## Getting Started
+A modern, SEO-friendly Learning Management System (LMS) built with Next.js, TypeScript, Tailwind CSS, and GraphQL, optimized for performance, accessibility, and personalized course delivery.
 
-First, run the development server:
+Table of Contents
 
-```bash
+Overview
+
+Features
+
+Tech Stack
+
+Setup & Installation
+
+Folder Structure
+
+Usage
+
+Accessibility
+
+Contributing
+
+License
+
+Overview
+
+Skool is a modern Learning Management System designed for seamless course browsing and personalized learning experiences. It leverages server-side rendering (SSR) and static site generation (SSG) for SEO-critical content while providing a responsive, fast, and accessible interface.
+
+Features
+
+SEO-optimized home page and course listings
+
+Personalized course recommendations
+
+Responsive and dark-mode-ready design
+
+Fast and efficient data fetching with GraphQL
+
+Optimized images using Next.js Image component or S3/CloudFront
+
+Keyboard navigation and semantic markup for accessibility
+
+Easy-to-extend component architecture using Tailwind CSS + shadcn/ui
+
+Tech Stack
+
+Framework: Next.js (TypeScript)
+
+Styling: Tailwind CSS + shadcn/ui
+
+Data: GraphQL (Apollo Client / URQL)
+
+State Management: Local component state + React Context + Apollo/URQL caching
+
+Media: Next.js Image optimization or S3/CloudFront signed URLs
+
+Accessibility: ARIA, semantic HTML, keyboard navigation
+
+Setup & Installation
+
+Clone the repository:
+
+git clone https://github.com/yourusername/skool.git
+cd skool
+
+
+Install dependencies:
+
+npm install
+
+
+Configure environment variables:
+
+NEXT_PUBLIC_GRAPHQL_ENDPOINT=<your_graphql_endpoint>
+NEXT_PUBLIC_S3_URL=<your_s3_url_if_any>
+
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open http://localhost:3000
+ to view it in the browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Folder Structure
+/skool
+├─ /components    # Reusable UI components
+├─ /pages         # Next.js pages
+├─ /graphql       # GraphQL queries and mutations
+├─ /context       # React context for auth, theme, etc.
+├─ /styles        # Tailwind configuration & design tokens
+├─ /public        # Static assets (images, icons)
 
-## Learn More
+Usage
 
-To learn more about Next.js, take a look at the following resources:
+Browse courses on the home page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+View course details with optimized images and content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Personalized recommendations appear for logged-in users
 
-## Deploy on Vercel
+Supports dark mode and responsive layouts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Accessibility
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Keyboard navigation for carousels and menus
+
+Semantic HTML elements for better screen reader support
+
+ARIA attributes added where necessary
+
+Contributing
+
+Contributions are welcome!
+
+Fork the repository
+
+Create your feature branch: git checkout -b feature-name
+
+Commit your changes: git commit -m 'Add new feature'
+
+Push to the branch: git push origin feature-name
+
+Open a pull request
+
+License
+
+This project is licensed under the MIT License.
