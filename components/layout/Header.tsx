@@ -1,20 +1,16 @@
-// components/layout/Header.tsx
 "use client";
 
 import { useState } from "react";
 import { Menu, Search, ShoppingCart, Bell } from "lucide-react";
-
 import Link from "next/link";
 import Logo from "./Logo";
-
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4">
-        {/* Left: logo + mobile menu */}
         <button
           className="mr-1 rounded-md p-1.5 hover:bg-slate-100 md:hidden"
           onClick={() => setMobileOpen((v) => !v)}
@@ -25,8 +21,7 @@ export default function Header() {
 
         <Logo />
 
-        {/* Desktop nav */}
-        <nav className="hidden shrink-0 text-sm font-medium text-slate-700 md:flex md:items-center md:gap-4">
+        <nav className="hidden shrink-0 text-sm font-medium text-slate-700 md:flex md:items-center md:gap-3">
           <button className="rounded-full px-3 py-1 hover:bg-slate-100">
             Browse
           </button>
@@ -38,7 +33,7 @@ export default function Header() {
           </button>
         </nav>
 
-        {/* Search */}
+        {/* search */}
         <div className="relative hidden flex-1 items-center md:flex">
           <Search className="pointer-events-none absolute left-3 h-4 w-4 text-slate-500" />
           <input
@@ -48,7 +43,6 @@ export default function Header() {
           />
         </div>
 
-        {/* Right icons */}
         <div className="ml-auto flex items-center gap-1">
           <button className="rounded-full p-2 hover:bg-slate-100 md:hidden">
             <Search className="h-5 w-5" />
@@ -65,15 +59,14 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile search and nav */}
       {mobileOpen && (
-        <div className="border-t bg-white md:hidden">
+        <div className="border-t border-slate-200 bg-white md:hidden">
           <div className="px-4 py-3">
             <div className="relative mb-3">
               <Search className="pointer-events-none absolute left-3 top-2.5 h-4 w-4 text-slate-500" />
               <input
                 type="text"
-                placeholder="Search for anything"
+                placeholder="Search for courses, topics, or instructors"
                 className="w-full rounded-full border border-slate-300 bg-slate-50 py-2 pl-9 pr-4 text-sm placeholder:text-slate-500 focus:border-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-900/5"
               />
             </div>

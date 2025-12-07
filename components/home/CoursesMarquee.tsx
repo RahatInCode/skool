@@ -60,9 +60,9 @@ export default function CoursesMarquee() {
           onMouseEnter={() => setStopScroll(true)}
           onMouseLeave={() => setStopScroll(false)}
         >
-          {/* Gradients */}
-          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-linear-to-r from-slate-50 via-slate-50 to-transparent" />
-          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-linear-to-l from-slate-50 via-slate-50 to-transparent" />
+          {/* gradient fades */}
+          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-linear-to-r from-slate-50 via-slate-50 to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-linear-to-l from-slate-50 via-slate-50 to-transparent" />
 
           <div
             className="marquee-inner flex w-fit"
@@ -75,7 +75,7 @@ export default function CoursesMarquee() {
               {[...cardData, ...cardData].map((card, index) => (
                 <div
                   key={index}
-                  className="group relative mx-4 h-72 w-64 overflow-hidden rounded-2xl border border-slate-200/70 bg-slate-100/40 shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
+                  className="group relative mx-4 h-72 w-64 overflow-hidden rounded-2xl bg-slate-200/40 shadow-sm ring-1 ring-slate-200/80 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg hover:ring-slate-300"
                 >
                   <Image
                     src={card.image}
@@ -85,10 +85,10 @@ export default function CoursesMarquee() {
                     className="h-full w-full object-cover"
                   />
 
-                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/15 to-transparent" />
 
                   <div className="absolute inset-0 flex items-end p-4">
-                    <p className="max-w-[16rem] text-sm font-semibold text-white drop-shadow">
+                    <p className="max-w-56 text-sm font-semibold text-white drop-shadow">
                       {card.title}
                     </p>
                   </div>
