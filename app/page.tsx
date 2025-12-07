@@ -1,4 +1,3 @@
-// app/page.tsx
 import CourseRow from "@/components/home/CourseRow";
 import CoursesMarquee from "@/components/home/CoursesMarquee";
 import Hero from "@/components/home/Hero";
@@ -115,26 +114,26 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <div className="border-y bg-white">
-        <div className="mx-auto max-w-6xl px-4">
-          <section className="py-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <h2 className="text-xl font-semibold tracking-tight">
-                  Let&apos;s start learning
-                </h2>
-                <p className="text-sm text-slate-600">
-                  Jump back into your current courses or explore something new.
-                </p>
-              </div>
-              <button className="text-sm font-semibold text-indigo-600 hover:text-indigo-700">
-                My learning
-              </button>
-            </div>
-          </section>
+
+      {/* “Let’s start learning” bar */}
+      <section className="border-y border-slate-200/80 bg-white/90">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-5">
+          <div>
+            <h2 className="text-base font-semibold text-slate-900">
+              Let&apos;s start learning
+            </h2>
+            <p className="text-sm text-slate-600">
+              Jump back into your current courses or explore something new.
+            </p>
+          </div>
+          <button className="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm font-semibold text-slate-900 shadow-sm hover:border-slate-400 hover:bg-slate-50">
+            My learning
+          </button>
         </div>
-      </div>
-<CoursesMarquee />
+      </section>
+
+      <CoursesMarquee />
+
       <CourseRow
         title="Keep learning where you left off"
         subtitle="Continue your active courses."
