@@ -37,7 +37,7 @@ const courses: Course[] = [
     price: "$12.99",
     oldPrice: "$79.99",
     badge: "Highest rated",
-    category: "Data Science",
+    category: "Data & AI",
     thumbnailGradient: "from-rose-500 via-fuchsia-500 to-indigo-500",
   },
   {
@@ -115,34 +115,83 @@ export default function HomePage() {
     <>
       <Hero />
 
-      {/* “Let’s start learning” bar */}
-      <section className="border-y border-slate-200/80 bg-white/90">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-5">
+      {/* Trusted by / stats */}
+      <section className="border-y border-slate-200/70 bg-white">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-5 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="text-base font-semibold text-slate-900">
-              Let&apos;s start learning
-            </h2>
-            <p className="text-sm text-slate-600">
-              Jump back into your current courses or explore something new.
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Trusted by teams at
             </p>
+            <div className="mt-2 flex flex-wrap gap-4 text-sm font-semibold text-slate-500">
+              <span>Acme Corp</span>
+              <span>Nova Labs</span>
+              <span>DevHub</span>
+              <span>Cloudify</span>
+            </div>
           </div>
-          <button className="rounded-full border border-slate-300 bg-white px-4 py-1.5 text-sm font-semibold text-slate-900 shadow-sm hover:border-slate-400 hover:bg-slate-50">
-            My learning
-          </button>
+          <div className="flex gap-6 text-xs text-slate-600">
+            <div>
+              <p className="text-base font-semibold text-slate-900">10k+</p>
+              <p>Learners enrolled</p>
+            </div>
+            <div>
+              <p className="text-base font-semibold text-slate-900">1,200+</p>
+              <p>Expert‑led lessons</p>
+            </div>
+            <div>
+              <p className="text-base font-semibold text-slate-900">4.8 / 5</p>
+              <p>Average rating</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Top categories */}
+      <section className="bg-slate-50 py-8">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-4 flex items-end justify-between gap-2">
+            <div>
+              <h2 className="text-xl font-semibold text-slate-900">Top categories</h2>
+              <p className="text-sm text-slate-600">
+                Choose a category to start exploring courses.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {[
+              "Web Development",
+              "Data & AI",
+              "Design",
+              "Business",
+              "Cloud & DevOps",
+              "Productivity",
+              "Marketing",
+              "Personal Development",
+            ].map((cat) => (
+              <button
+                key={cat}
+                className="flex items-center justify-between rounded-xl bg-white px-4 py-3 text-sm font-medium text-slate-800 shadow-sm ring-1 ring-slate-200/80 transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <span>{cat}</span>
+                <span className="text-xs text-slate-400">›</span>
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
       <CoursesMarquee />
 
       <CourseRow
-        title="Keep learning where you left off"
-        subtitle="Continue your active courses."
-        courses={courses.slice(0, 4)}
+        title="Students are viewing"
+        subtitle="The most popular courses on Skool right now."
+        courses={courses}
       />
 
       <CourseRow
         title="Recommended for you"
-        subtitle="Personalized picks based on your interests."
+        subtitle="Hand‑picked courses across categories."
         courses={courses}
       />
 

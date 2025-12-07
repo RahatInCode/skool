@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f9fa;   
-  --foreground: #111827;
+  --background: #f5f7fa;
+  --foreground: #0f172a;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", sans-serif;
-  --font-mono: var(--font-geist-mono);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
