@@ -148,7 +148,7 @@ export default function CourseDetailClient({ courseId }: { courseId: string }) {
         {/* Main Content */}
         <div className="lg:col-span-2 space-y-6">
           <div
-            className={`relative h-64 w-full overflow-hidden rounded-2xl bg-gradient-to-br ${course.thumbnailGradient}`}
+            className={`relative h-64 w-full overflow-hidden rounded-2xl bg-linear-to-br ${course.thumbnailGradient}`}
           >
             <div className="absolute inset-0 bg-black/20" />
           </div>
