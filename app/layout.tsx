@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { AuthProvider } from "@/context/AuthContext";
+import { GraphQLProvider } from "@/lib/graphql/provider";
 
 export const metadata: Metadata = {
   title: "Skool – Learn anything, anytime",
@@ -16,9 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-slate-50 text-slate-900 antialiased">
-        <Header />
-        <main className="pb-16">{children}</main>
-        <Footer />
+        <GraphQLProvider>
+          <AuthProvider>
+            <Header />
+            <main className="pb-16">{children}</main>
+            <Footer />
+          </AuthProvider>
+        </GraphQLProvider>
       </body>
     </html>
   );
