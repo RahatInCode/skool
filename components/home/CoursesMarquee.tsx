@@ -26,6 +26,46 @@ export default function CoursesMarquee() {
       image:
         "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&auto=format&fit=crop&q=60",
     },
+    {
+      title: "Cybersecurity Essentials",
+      image:
+        "https://images.unsplash.com/photo-1508385082359-f2f3f1b0e3c1?w=1200&auto=format&fit=crop&q=60",
+    },
+    {
+      title: "Cloud Computing Fundamentals",
+      image:
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&auto=format&fit=crop&q=60",
+    },
+    {
+      title: "Mobile App Development Bootcamp",
+      image:
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&auto=format&fit=crop&q=60",
+    },              
+    {
+      title: "Project Management Professional (PMP)",
+      image:
+        "https://images.unsplash.com/photo-1551836022-1b5d3f417e3a?w=1200&auto=format&fit=crop&q=60",
+    },
+    {
+      title: "Creative Writing Workshop",
+      image:
+        "https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1200&auto=format&fit=crop&q=60",
+    },
+    {
+      title: "Photography Masterclass",
+      image:
+        "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=1200&auto=format&fit=crop&q=60",
+    },
+    {
+      title: "Introduction to Blockchain Technology",
+      image:
+        "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=1200&auto=format&fit=crop&q=60",
+    },
+    {
+      title: "Artificial Intelligence Basics",
+      image:
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&auto=format&fit=crop&q=60",
+    }
   ];
 
   return (
