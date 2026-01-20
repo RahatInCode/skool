@@ -65,6 +65,10 @@ export default function CoursesMarquee() {
       title: "Artificial Intelligence Basics",
       image:
         "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&auto=format&fit=crop&q=60",
+    },
+    {
+      title: "Financial Analysis and modeling",
+      image:"https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&auto=format&fit=crop&q=60",
     }
   ];
 
