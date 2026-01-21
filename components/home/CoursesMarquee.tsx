@@ -100,7 +100,7 @@ export default function CoursesMarquee() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-slate-50 to-white py-16">
+    <section className="relative bg-linear-to-b from-slate-50 to-white py-16">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">
@@ -144,8 +144,8 @@ export default function CoursesMarquee() {
           onMouseLeave={() => setStopScroll(false)}
         >
           {/* Enhanced gradient fades */}
-          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-gradient-to-r from-slate-50 via-slate-50/80 to-transparent" />
-          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-gradient-to-l from-white via-white/80 to-transparent" />
+          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-32 bg-linear-to-r from-slate-50 via-slate-50/80 to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-32 bg-linear-to-l from-white via-white/80 to-transparent" />
 
           <div
             className="marquee-inner flex w-fit py-4"
@@ -158,13 +158,13 @@ export default function CoursesMarquee() {
               {[...cardData, ...cardData].map((card, index) => (
                 <div
                   key={index}
-                  className="group relative h-80 w-72 flex-shrink-0 overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
+                  className="group relative h-80 w-72 shrink-0 overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl"
                 >
                   {/* Gradient Background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-90`} />
+                  <div className={`absolute inset-0 bg-linear-to-br ${card.gradient} opacity-90`} />
                   
                   {/* Animated gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                   {/* Content */}
                   <div className="relative flex h-full flex-col justify-between p-6">
